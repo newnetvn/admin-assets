@@ -1,0 +1,92 @@
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.gallery-list .gallery-item {
+    width: 33.33%;
+    padding: 4px;
+    position: relative;
+    cursor: move;
+}
+
+.gallery-list.list-md .gallery-item {
+    width: 20%;
+}
+
+.gallery-list.list-lg .gallery-item {
+    width: 12.5%;
+}
+
+.gallery-list .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border: solid 1px #d9d9d9;
+}
+
+.gallery-list .gallery-item .remove-media {
+    display: none;
+    z-index: 5;
+    font-size: 20px;
+    background: #ffffff;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.gallery-list .gallery-item:hover img{
+    border-color: #cdcdcd;
+}
+
+.gallery-list .gallery-item:hover .remove-media {
+    display: flex;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    color: #bababa;
+}
+
+.gallery-list .gallery-item .remove-media:hover {
+    color: #ff0000;
+}
+
+.gallery-list .gallery-highlight {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-list .gallery-highlight:before {
+    content: '';
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: #ebebeb;
+    border: dashed 2px #b6b6b6;
+    display: block;
+    position: absolute;
+}
+
+.gallery-list .gallery-highlight:after {
+    content: "\f302";
+    font-family: "Font Awesome 5 Pro";
+    z-index: 2;
+    color: #cdcdcd;
+    font-size: 26px;
+}
+
+.inputFileGallery{
+    display: none;
+}
+
+.labelFileGallery{
+    color: #37a000;
+    cursor: pointer;
+    margin-bottom: 0;
+}
